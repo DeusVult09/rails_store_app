@@ -24,4 +24,12 @@ class ProductsController < ApplicationController
       params.expect(product: [ :name ])
     end
   end
+
+  def edit 
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = 
+  end
 end
