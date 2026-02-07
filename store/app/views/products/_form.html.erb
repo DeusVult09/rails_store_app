@@ -4,6 +4,8 @@
     <%= form.file_field  :featured_image, accept: "image/*" %>
     <%= form.label :description, style: "display: block" %>
     <%= form.rich_textarea :description %>
+    <%= form.label :inventory_count, style: "display: block" %>
+    <%= form.number_field :inventory_count %>
   </div>
 
   <div>
