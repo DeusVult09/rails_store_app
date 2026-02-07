@@ -1,7 +1,7 @@
 <% debug @products %>
 <%= link_to "New product", new_product_path if authenticated? %>
 
-<h1>Products</h1>
+<h1><%= t ".title" %></h1>
 <%= link_to "New product", new_product_path %>
 
 <div id="products">
