@@ -6,23 +6,23 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
-  def show 
+  def show
   end
 
   def new
     @product = Product.new
   end
 
-  def create 
+  def create
     @product = Product.new(product_params)
-    if @product.save 
+    if @product.save
       redirect_to @product
     else
-      render :new, status: :unprocessable_entity 
+      render :new, status: :unprocessable_entity
     end
   end
 
-  def edit 
+  def edit
   end
 
   def update
@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
   end
 
 
-  private 
+  private
     def product_params
       params.expect(product: [ :name, :description,  :featured_image, :inventory_count ])
     end

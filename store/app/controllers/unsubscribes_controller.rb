@@ -7,7 +7,7 @@ class UnsubscribesController < ApplicationController
     redirect_to root_path, notice: "Unsubscribed successfully."
   end
 
-  private 
+  private
   def set_subscriber
     @subscriber = Subscriber.find_by_token_for(:unsubscribe, params[:token])
   end
