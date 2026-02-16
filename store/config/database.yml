@@ -18,5 +18,15 @@ test:
   database: db/test.sqlite3
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  primary:
+    url: <%= ENV['DATABASE_URL'] %>
+    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+  cache:
+    url: <%= ENV['DATABASE_URL'] %>
+
+  queue:
+    url: <%= ENV['DATABASE_URL'] %>
+
+  cable:
+    url: <%= ENV['DATABASE_URL'] %>
